@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.suggestSmartCommit": false,
+  "git.autoStash": true,
+  "git.confirmSync": false,
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
+}
