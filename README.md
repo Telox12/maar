@@ -1,3 +1,15 @@
-# React + Vite + Firebase 10
+# React + Vite + Firebase 10 + Tanstack
 
-This template provides a minimal setup to get React working in Vite and Firebase 10 and Firestore for authentication and real-time database usage.
+Boilerplate made by https://github.com/macchiatoit
+
+### Dev
+
+`pnpm dev`
+
+### Build
+
+`pnpm build`
+
+### Deploy
+
+`pnpm deploy`
