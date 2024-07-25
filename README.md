@@ -1,15 +1,22 @@
-# React + Vite + Firebase 10 + Tanstack
+# MAAR
 
-Boilerplate made by https://github.com/macchiatoit
+React + Vite + Firebase 10 + Tanstack boilerplate made by https://github.com/macchiatoit
 
-### Dev
+https://studentsforstudents-7666e.web.app
 
-`pnpm dev`
+### Development
 
-### Build
+The local development server is Vite and can be started with `pnpm dev`
+It's usually available under `http://localhost:5173/`
 
-`pnpm build`
+### Build and Deploy
 
-### Deploy
+Build app and deploy firebase rules, indexes and hosting with `pnpm firebase:deploy`
 
-`pnpm deploy`
+### Firebase
+
+Console: https://console.firebase.google.com/project/studentsforstudents-7666e/overview
+
+Firestore database: https://console.firebase.google.com/project/studentsforstudents-7666e/firestore/databases/-default-/data
+
+Hosting: https://studentsforstudents-7666e.web.app
