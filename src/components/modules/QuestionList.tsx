@@ -12,8 +12,11 @@ import { db } from "../../lib/firebase";
 import { COLLECTIONS } from "../../lib/collections";
 import { Question } from "../../entities/question";
 import { format } from "date-fns";
+import { useNavigate } from "@tanstack/react-router";
 
-export function Questions() {
+export function QuestionList() {
+  const navigate = useNavigate();
+
   const [text, setText] = useState("");
   const [questions, setQuestions] = useState<Question[]>([]);
 
@@ -55,15 +58,24 @@ export function Questions() {
       </div>
       <div>
         {questions.map((question, index) => (
-          <div key={index}>
-            <p>{question.text}</p>
-            <p>{question.createdAt}</p>
-            <input
-              type="button"
-              onClick={() => handleRemove(question)}
-              value="Löschen"
-            />
-          </div>
+          <button
+            key={index}
+            onClick={() =>
+              navigate({
+                to: `/question/${question.id}`,
+              })
+            }
+          >
+            <div>
+              <p>{question.text}</p>
+              <p>{question.createdAt}</p>
+              <input
+                type="button"
+                onClick={() => handleRemove(question)}
+                value="Löschen"
+              />
+            </div>
+          </button>
         ))}
       </div>
     </>

@@ -11,3 +11,10 @@ service cloud.firestore {
     }
   }
 }
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /questions/{questionId} {
+      allow read, write: if true;
+    }
+  }
+}
