@@ -31,7 +31,7 @@ const AnswerList: React.FC<AnswerListProps> = ({ question }) => {
   return (
     <div>
       <h3>Antworten</h3>
-      <ul>
+      <ul className="answer-list">
         {answers.map((answer) => (
           <li key={answer.id}>{answer.answer}</li>
         ))}
