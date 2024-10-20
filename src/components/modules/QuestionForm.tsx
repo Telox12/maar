@@ -15,16 +15,16 @@ export function QuestionForm({ questionId }: { questionId: string }) {
         setQuestion({ id: snapshot.id, ...snapshot.data() } as Question);
       }
     });
-  }, []);
+  }, [questionId]);
 
   return (
     <>
       {question && (
-        <>
-          <p>{question.text}</p>
+        <div className="question-form">
+          <p className="question-text">{question.text}</p>
           <AnswerList question={question} />
           <AnswerForm question={question} />
-        </>
+        </div>
       )}
     </>
   );

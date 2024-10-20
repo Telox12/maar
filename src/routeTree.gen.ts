@@ -69,11 +69,49 @@ declare module '@tanstack/react-router' {
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren({
-  IndexLazyRoute,
-  QuestionIdLazyRoute,
-  QuestionIndexLazyRoute,
-})
+export interface FileRoutesByFullPath {
+  '/': typeof IndexLazyRoute
+  '/question/$id': typeof QuestionIdLazyRoute
+  '/question': typeof QuestionIndexLazyRoute
+}
+
+export interface FileRoutesByTo {
+  '/': typeof IndexLazyRoute
+  '/question/$id': typeof QuestionIdLazyRoute
+  '/question': typeof QuestionIndexLazyRoute
+}
+
+export interface FileRoutesById {
+  __root__: typeof rootRoute
+  '/': typeof IndexLazyRoute
+  '/question/$id': typeof QuestionIdLazyRoute
+  '/question/': typeof QuestionIndexLazyRoute
+}
+
+export interface FileRouteTypes {
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/' | '/question/$id' | '/question'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/question/$id' | '/question'
+  id: '__root__' | '/' | '/question/$id' | '/question/'
+  fileRoutesById: FileRoutesById
+}
+
+export interface RootRouteChildren {
+  IndexLazyRoute: typeof IndexLazyRoute
+  QuestionIdLazyRoute: typeof QuestionIdLazyRoute
+  QuestionIndexLazyRoute: typeof QuestionIndexLazyRoute
+}
+
+const rootRouteChildren: RootRouteChildren = {
+  IndexLazyRoute: IndexLazyRoute,
+  QuestionIdLazyRoute: QuestionIdLazyRoute,
+  QuestionIndexLazyRoute: QuestionIndexLazyRoute,
+}
+
+export const routeTree = rootRoute
+  ._addFileChildren(rootRouteChildren)
+  ._addFileTypes<FileRouteTypes>()
 
 /* prettier-ignore-end */
 

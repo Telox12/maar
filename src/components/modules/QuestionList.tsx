@@ -48,17 +48,24 @@ export function QuestionList() {
 
   return (
     <>
-      <div>
+      <div className="question-input-container">
         <input
+          className="question-input"
           type="text"
           value={text}
           onChange={(e) => setText(e.currentTarget.value)}
         />
-        <input type="button" onClick={handleAdd} value="Speichern" />
+        <input
+          className="question-submit-button"
+          type="button"
+          onClick={handleAdd}
+          value="Speichern"
+        />
       </div>
-      <div>
+      <div className="question-list">
         {questions.map((question, index) => (
           <button
+            className="question-item-button"
             key={index}
             onClick={() =>
               navigate({
@@ -66,10 +73,11 @@ export function QuestionList() {
               })
             }
           >
-            <div>
-              <p>{question.text}</p>
-              <p>{question.createdAt}</p>
+            <div className="question-item">
+              <p className="question-text">{question.text}</p>
+              <p className="question-date">{question.createdAt}</p>
               <input
+                className="question-delete-button"
                 type="button"
                 onClick={() => handleRemove(question)}
                 value="Löschen"

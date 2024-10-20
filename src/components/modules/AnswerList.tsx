@@ -29,11 +29,13 @@ const AnswerList: React.FC<AnswerListProps> = ({ question }) => {
   }, [question]);
 
   return (
-    <div>
-      <h3>Antworten</h3>
+    <div className="answer-list-container">
+      <h3 className="answer-list-title">Antworten</h3>
       <ul className="answer-list">
         {answers.map((answer) => (
-          <li key={answer.id}>{answer.answer}</li>
+          <li className="answer-item" key={answer.id}>
+            {answer.answer}
+          </li>
         ))}
       </ul>
     </div>

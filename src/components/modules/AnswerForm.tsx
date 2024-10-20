@@ -18,14 +18,17 @@ const AnswerForm: React.FC<AnswerFormProps> = ({ question }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="answer-form" onSubmit={handleSubmit}>
       <textarea
+        className="answer-textarea"
         value={answer}
         onChange={(e) => setAnswer(e.target.value)}
         placeholder="Antwort eingeben..."
         rows={4}
       />
-      <button type="submit">Antwort senden</button>
+      <button className="answer-submit-button" type="submit">
+        Antwort senden
+      </button>
     </form>
   );
 };

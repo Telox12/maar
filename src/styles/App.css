@@ -1,102 +1,4 @@
-/* main.css */
 
-/* Globale Stile */
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 100%;
-}
-
-body {
-  font-family: "Raleway", sans-serif;
-  background-color: #f5f5f5; /* Heller Hintergrund */
-  color: #333;
-  line-height: 1.6;
-  margin: 0;
-  padding-top: 5rem; /* Platz für den Header */
-}
-
-/* Allgemeine Container-Größe für Desktop und größere Bildschirme */
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-/* Stile für Links */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Stile für Buttons */
-button {
-  background-color: transparent;
-  background-image: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* Header Styles */
-/*
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #007bff;
-  color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 24px;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-header nav ul li {
-  padding: 1rem;
-}
-
-header nav ul li a {
-  color: white;
-  font-weight: bold;
-}
-*/
-
-/* Footer Styles */
-/*footer {
-  background-color: #2b2b2b;
-  color: #f7f7f7;
-  text-align: center;
-  padding: 2rem 0;
-}
-
-footer p {
-  margin: 0;
-}
-*/
-
-/* app.css */
-
-/* Root Container */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -104,28 +6,50 @@ footer p {
   text-align: center;
 }
 
-/* Header Styles */
+
 .header {
-  padding: 1rem;
+  padding: 1.5rem;
   width: 100%;
-  height: 5rem;
-  background: #d3d3d3;
+  background-color: #f5f5f5;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; 
+  align-items: center; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ddd;
+  position: relative; 
 }
 
-/* Content Styles */
+.header a {
+  text-decoration: none;
+}
+
+
+.header-title {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
 .content {
   padding: 1rem;
   min-height: 200px;
-  background-color: #ffffff; /* Weißer Hintergrund für Inhalt */
+  background-color: #ffffff; 
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Schatten für Karte */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
   margin-bottom: 2rem;
 }
 
-/* Frageformular und Fragenliste */
+.back-link {
+  display: inline-block;
+  margin: 5px 0 20px 0;
+  padding: 5px 10px 3px 10px;
+  font-size: 12px;
+  color: #212121;
+  border: 1px solid #212121;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
 .question-input-container {
   display: flex;
   justify-content: space-between;
@@ -150,7 +74,7 @@ footer p {
 .question-input:focus {
   border-color: #007bff;
   outline: none;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Leichter blauer Fokus-Effekt */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); 
 }
 
 .question-submit-button {
@@ -164,12 +88,12 @@ footer p {
     background-color 0.3s ease,
     box-shadow 0.3s ease;
   font-size: 16px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Button */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .question-submit-button:hover {
   background-color: #218838;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Tieferer Schatten beim Hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .question-submit-button:active {
@@ -177,7 +101,7 @@ footer p {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Frage Liste */
+
 .question-list {
   display: flex;
   flex-direction: column;
@@ -222,15 +146,14 @@ footer p {
   background-color: #c82333;
 }
 
-/* Footer Styles */
 .footer {
-  color: #f7f7f7;
   width: 100%;
   padding: 2rem;
-  background: #2b2b2b;
-}
-
-ul.answer-list {
+  background-color: #2b2b2b;
+  color: #f7f7f7;
+  text-align: center;
+  margin-top: 2rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
 
 ul.answer-list li {
@@ -238,12 +161,132 @@ ul.answer-list li {
   border-bottom: 1px #333 solid;
 }
 
+.footer-text {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.answer-list-container {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.answer-list-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.answer-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.answer-item {
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.answer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.answer-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.answer-textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.answer-submit-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.answer-submit-button:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.answer-submit-button:active {
+  background-color: #1e7e34;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.index-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.index-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.index-title {
+  font-size: 32px;
+}
+
+.index-description {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.description-text {
+  font-size: 16px;
+}
+
 .question-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
   border: 1px solid #000;
-  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 .question-link:hover {
-  background-color: #007bff;
+  background-color: #0056b3;
   color: #fff;
 }
